@@ -1,0 +1,31 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../base
+
+namespace: default
+
+replicas:
+- name: nginx-test
+  count: 1
+
+patches:
+- target:
+    kind: Ingress
+    name: nginx-test-ingress
+  path: ingress.yaml
+- target:
+    kind: Deployment
+    name: nginx-test
+  path: images.yaml
+- target:
+    kind: Deployment
+    name: nginx-test
+  path: resources.yaml
+
+configMapGenerator:
+- name: env
+  namespace: default
+  envs:
+  - env

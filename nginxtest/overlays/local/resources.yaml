@@ -1,0 +1,19 @@
+# Change resources requests
+# Chane CPU requests
+- op: replace
+  path: /spec/template/spec/containers/0/resources/requests/cpu
+  value: 50m
+# Change memory requests
+- op: replace
+  path: /spec/template/spec/containers/0/resources/requests/memory
+  value: 128M
+
+# Change resources limits
+# Change CPU limit
+- op: replace
+  path: /spec/template/spec/containers/0/resources/limits/cpu
+  value: 500m
+# Change memory limit
+- op: replace
+  path: /spec/template/spec/containers/0/resources/limits/memory
+  value: 256M

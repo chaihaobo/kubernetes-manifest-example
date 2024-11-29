@@ -1,0 +1,2 @@
+GOOGLE_APPLICATION_CREDENTIALS=/secret/service-account
+VERSION=latest
