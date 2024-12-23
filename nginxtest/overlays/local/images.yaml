@@ -1,4 +1,4 @@
 # Change container images
 - op: replace
   path: /spec/template/spec/containers/0/image
-  value: nginx:stable-perl
+  value: nginx:stable
